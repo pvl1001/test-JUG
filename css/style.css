@@ -1,0 +1,711 @@
+html, body {
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+.container {
+    padding: 149px 85px 80px;
+    max-width: 505px;
+    position: relative;
+}
+
+.logo {
+    margin-bottom: 60px;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 21px;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    color: #000000;
+    margin-bottom: 100px;
+}
+
+.btn {
+    border-radius: 12px;
+    width: 210px;
+    height: 65px;
+    border: 0;
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+}
+
+.buy {
+    background-color: #FBCB03;
+    color: #000;
+    margin-right: 21px;
+    transition: .3s;
+}
+
+.buy:hover {
+    background-color: #E6B901;
+}
+
+.buy:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 26px);
+    height: 52px;
+    width: 52px;
+    background: url('../img/1f64b-200d-2642-fe0f 2.svg') center / contain no-repeat;
+}
+
+.send {
+    background-color: #000000;
+    color: #fff;
+    transition: .3s;
+}
+
+.send:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.send:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -42px;
+    left: calc(50% - 22px);
+    height: 44px;
+    width: 44px;
+    background: url('../img/1f926-200d-2642-fe0f 2.svg') center / contain no-repeat;
+}
+
+.bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    z-index: -1;
+}
+
+.bg img {
+    position: relative;
+    z-index: 1;
+}
+
+.animation-wrapp {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: rotate(40deg) translate(-35px, -225px);
+    overflow: hidden;
+    height: 677px;
+}
+
+.animation {
+    animation: line 10s infinite;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+.animation2 {
+
+}
+
+@keyframes line {
+    from {
+        top: -75px;
+    }
+    to {
+        top: -100%;
+    }
+}
+
+.animation div {
+    width: 100%;
+    height: 75px;
+    background-color: #000;
+    margin-bottom: 75px;
+}
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding-top: 87px;
+    height: 100%;
+    width: 100%;
+    transition: .5s;
+}
+
+.modal__wrapp {
+    max-width: 1265px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 56px;
+}
+
+.modal__cols {
+    display: flex;
+    justify-content: center;
+}
+
+.modal__col1 {
+    margin-right: 44px;
+}
+
+.modal__col1,
+.modal__col2 {
+    width: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    height: 498px;
+    margin-bottom: 75px;
+}
+
+.modal__col2 {
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.modal__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 130%;
+    padding: 0 25px;
+    margin-bottom: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.modal__title span {
+    margin-left: 20px;
+    display: inline-block;
+    max-width: 292px;
+}
+
+.modal__sign-up {
+    padding: 0 52px;
+    display: flex;
+    margin-bottom: 100px;
+    position: relative;
+}
+
+.modal__sign-up input {
+    height: 50px;
+    border: 0;
+    flex-grow: 1;
+    margin-right: 10px;
+    border-radius: 11px;
+    box-sizing: border-box;
+    background-color: #F8F8F8;
+    padding-left: 28px;
+}
+
+.modal__sign-up button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 11px;
+    height: 50px;
+    background: #FFFFFF;
+    padding: 0 32px;
+    cursor: pointer;
+}
+
+.modal__sign-up input::placeholder {
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.modal__personal {
+    font-size: 12px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.32);
+    padding-left: 52px;
+    max-width: 237px;
+}
+
+.modal__personal a {
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.modal__col2 .modal__title {
+    margin-bottom: 70px;
+}
+
+.modal__col2 .face {
+    width: 60px;
+    height: 60px;
+    background: url('../img/1f926-200d-2642-fe0f 2.svg') center / contain no-repeat;
+}
+
+.modal__col1 .face {
+    width: 60px;
+    height: 60px;
+    background: url('../img/1f64b-200d-2642-fe0f 2.svg') center / contain no-repeat;
+}
+
+.modal__col2 .modal__title {
+    margin-bottom: 70px;
+}
+
+.form {
+    padding: 0 85px;
+}
+
+.form div {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 45px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .3s;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+.form div:hover {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    color: #000;
+}
+
+.form div:last-child {
+    margin-bottom: 0;
+}
+
+.modal__back {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 130%;
+    cursor: pointer;
+}
+
+.modal__back svg {
+    margin-right: 20px;
+}
+
+.sps {
+    display: none;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.sps-show {
+    display: flex;
+}
+
+.like__img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.like {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+.like__text {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.like-show {
+    display: flex;
+}
+
+#subscription {
+    transition: .3s;
+}
+
+#subscription:hover {
+    background-color: #F2F2F2;
+}
+
+.modal.open {
+    visibility: visible;
+    left: 0;
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+
+    .animation-wrapp {
+        transform: rotate(40deg) translate(-80px, -275px);
+        height: 500px;
+        padding-top: 90px;
+    }
+
+    .bg {
+        width: 55%;
+        display: initial;
+    }
+
+    .bg img {
+        padding-top: 90px;
+    }
+
+    .container {
+        padding: 225px 60px 80px;
+        max-width: 505px;
+        position: relative;
+    }
+
+    .animation div {
+        height: 55px;
+        margin-bottom: 55px;
+    }
+
+    @keyframes line {
+        from {
+            top: -55px;
+        }
+        to {
+            top: -100%;
+        }
+    }
+
+    .big-text {
+        font-size: 36px;
+        width: 100%;
+    }
+
+    .modal__cols {
+        flex-wrap: wrap;
+    }
+
+    .modal__col1, .modal__col2 {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        padding-top: 20px;
+        padding-bottom: 70px;
+    }
+
+    .modal {
+        padding: 0;
+        overflow: auto;
+    }
+
+    .modal__col1 {
+        order: 1;
+        border: 0;
+        padding: 0;
+        margin-bottom: 56px;
+    }
+
+    .modal__col2 {
+        margin-bottom: 70px;
+    }
+
+    .modal__title {
+        margin-bottom: 64px;
+    }
+
+    .modal__sign-up input {
+        border-radius: 7px;
+        padding-left: 15px;
+    }
+
+    button, .btn {
+        border-radius: 7px;
+    }
+
+    .modal__sign-up {
+        padding: 0 70px;
+        margin-bottom: 19px;
+    }
+
+    .modal__sign-up > * {
+        font-size: 14px;
+    }
+
+    .modal__personal {
+        padding: 0;
+    }
+
+    .modal__title {
+        font-size: 28px;
+        padding: 0 20px;
+    }
+
+    .form {
+        padding: 0 103px;
+    }
+
+    .form div {
+        font-size: 14px;
+    }
+
+    .modal__col2 .modal__title {
+        margin-bottom: 70px;
+    }
+
+    .modal__personal {
+        font-size: 12px;
+        padding-left: 70px;
+    }
+
+    .modal__back {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal__back svg {
+        width: 18px;
+        height: 35px;
+        margin-right: 20px;
+    }
+
+    .modal__sign-up button {
+        padding: 0 38px;
+    }
+
+    .modal__wrapp {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .container,
+    .bg {
+        width: 100%;
+        max-width: none;
+    }
+
+    .container {
+        order: 1;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: -82px;
+    }
+
+    .bg {
+        position: relative;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .bg img {
+        padding-top: 100px;
+        padding-left: 50px;
+    }
+
+    .big-text {
+        font-size: 28px;
+        line-height: 120%;
+        margin-bottom: 18px;
+        width: 100%;
+    }
+
+    .text {
+        font-size: 12px;
+        line-height: 150%;
+        color: rgba(0, 0, 0, 0.7);
+        margin-bottom: 60px;
+    }
+
+    .btn {
+        width: calc(50% - 8px);
+        margin: 0;
+        font-size: 11px;
+        height: 42px;
+    }
+
+    .buy:before {
+        width: 35px;
+        height: 34px;
+        top: -34px;
+        left: calc(50% - 17.5px);
+    }
+
+    .send:before {
+        width: 28px;
+        height: 28px;
+        top: -28px;
+        left: calc(50% - 14px);
+    }
+
+    .logo {
+        margin-bottom: 33px;
+    }
+
+    .animation div {
+        height: 35px;
+        margin-bottom: 35px;
+    }
+
+    @keyframes line {
+        from {
+            top: -50px;
+        }
+        to {
+            top: -100%;
+        }
+    }
+
+    .animation-wrapp {
+        transform: rotate(40deg) translate(-15%, -50%);
+        height: 100%;
+        padding-left: 50px;
+        padding-top: 100px;
+    }
+
+    .modal__cols {
+        flex-wrap: wrap;
+    }
+
+    .modal__col1, .modal__col2 {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .modal__wrapp {
+        padding: 20px;
+    }
+
+    .modal {
+        padding: 0;
+        overflow: auto;
+    }
+
+    .modal__col1 {
+        order: 1;
+        border: 0;
+        padding: 0;
+        margin-bottom: 36px;
+    }
+
+    .modal__col2 {
+        margin-bottom: 40px;
+    }
+
+    .modal__title {
+        margin-bottom: 37px;
+    }
+
+    .modal__sign-up input {
+        background-color: #F8F8F8;
+        border-radius: 7px;
+        margin-right: 6px;
+        padding-left: 15px;
+    }
+
+    button, .btn {
+        border-radius: 7px;
+    }
+
+    .modal__sign-up {
+        padding: 0;
+        margin-bottom: 19px;
+    }
+
+    .modal__sign-up > * {
+        font-size: 11px;
+        height: 39px !important;
+    }
+
+    .modal__personal {
+        padding: 0;
+    }
+
+    .modal__col2 .face,
+    .modal__col1 .face {
+        height: 40px;
+        width: 40px;
+        flex-shrink: 0;
+    }
+
+    .modal__title {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .form {
+        padding: 0 33px;
+    }
+
+    .form div {
+        font-size: 12px;
+    }
+
+    .modal__col2 .modal__title {
+        margin-bottom: 40px;
+    }
+
+    .modal__personal {
+        font-size: 10px;
+    }
+
+    .modal__back {
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal__back svg {
+        width: 9px;
+        height: 17px;
+        margin-right: 13px;
+    }
+
+    .modal__sign-up button {
+        padding: 0 18px;
+    }
+}

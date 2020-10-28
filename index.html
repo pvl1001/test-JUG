@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+        <img src="img/logo.png" height="41" width="126"/>
+    </div>
+    <div class="big-text">Конференции, которые нужны</div>
+    <div class="text">Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих. <br>
+        С нас — крутая программа, топовые спикеры, технические доклады без воды. <br>
+        С вас — готовность смотреть и общаться.
+    </div>
+    <button class="buy btn">Купить билет</button>
+    <button class="send btn">Послать в жопу</button>
+</div>
+<div class="bg">
+    <img src="img/jrg_live_background 2.png" width="100%"/>
+    <div class="animation-wrapp">
+        <div class="animation">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="animation animation2">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+
+<div id="sendModal" class="modal">
+    <div class="modal__wrapp">
+        <div class="modal__cols">
+            <div class="modal__col1">
+                <div class="modal__title">
+                    <div class="face"></div>
+                    <span>Я хочу знать, когда будет офлайн</span>
+                </div>
+                <div class="modal__sign-up">
+                    <input type="text" placeholder="Укажите email">
+                    <button id="subscription">Подписаться</button>
+                    <div class="sps">Спасибо, что подписались на нашу рассылку!
+                    <span></span></div>
+                </div>
+                <div class="modal__personal">
+                    Нажимая на кнопку вы соглашаетесь на обработку <a href="#">персональных данных</a>
+                </div>
+            </div>
+            <div class="modal__col2">
+                <div class="modal__title">
+                    <div class="face"></div>
+                    <span>Идите в жопу!</span>
+                </div>
+                <div class="form">
+                    <div>Вы свои цены видели?</div>
+                    <div>Доклады ни о чем</div>
+                    <div>У вас там всё хорошо?</div>
+                    <div>Денег нет, но вы держитесь</div>
+                </div>
+                <div class="like">
+                    <div class="like__img">
+                        <img src="img/like.png" height="100" width="100"/>
+                    </div>
+                    <div class="like__text">Спасибо, что поделились!</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal__back">
+            <svg width="24" height="39" viewBox="0 0 24 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21.3335 37L3.00016 19.5L21.3335 2" stroke="black" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <span>Я кликнул просто посмотреть</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="jquery-3.5.1.min.js"></script>
+<script>
+    $('.send.btn').click(function () {
+        $('#sendModal').addClass('open')
+    })
+
+    $('.modal__back').click(function () {
+        $('#sendModal').removeClass('open')
+    })
+
+    $('#subscription').click(function () {
+        $('.sps').addClass('sps-show')
+    })
+
+    $('.modal__col2 .form div').click(function () {
+        $('.modal__col2 .like').addClass('like-show')
+    })
+</script>
+</body>
+</html>
